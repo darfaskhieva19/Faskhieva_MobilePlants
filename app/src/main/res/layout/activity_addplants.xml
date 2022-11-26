@@ -6,20 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".PlantsAdd">
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/Header"
@@ -34,41 +21,82 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <SearchView
-                android:id="@+id/Search"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Header" />
 
-            <ImageView
-                android:id="@+id/filter"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="25dp"
-                app:layout_constraintBottom_toTopOf="@+id/Search"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/Header"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/filter" />
+    <ImageView
+        android:id="@+id/filter"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/filter" />
 
-            <ImageView
-                android:id="@+id/TxtBack"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="25dp"
-                android:onClick="onBack"
-                app:layout_constraintBottom_toTopOf="@+id/Search"
-                app:layout_constraintEnd_toStartOf="@+id/Header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/arrow" />
+    <ImageView
+        android:id="@+id/TxtBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:onClick="onBack"
+        app:layout_constraintBottom_toTopOf="@+id/Search"
+        app:layout_constraintEnd_toStartOf="@+id/Header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
 
+    <ImageView
+        android:id="@+id/Plants"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="OnClickInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Plants2"
+        app:layout_constraintTop_toBottomOf="@+id/Search"
+        app:srcCompat="@drawable/plant" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/Plants2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="OnClickInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Plants"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Search"
+        app:srcCompat="@drawable/plant" />
 
-    </ScrollView>
+    <TextView
+        android:id="@+id/NazvPlant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Название"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/NazvPlant2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Plants2" />
+
+    <TextView
+        android:id="@+id/NazvPlant2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Алоэ"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NazvPlant"
+        app:layout_constraintTop_toBottomOf="@+id/Plants" />
+
+    <SearchView
+        android:id="@+id/Search"
+        android:layout_width="410dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
