@@ -7,19 +7,17 @@
     tools:context=".PlantsAdd">
 
 
-
-            <TextView
-                android:id="@+id/Header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="45dp"
-                android:text="Добавление"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/Search"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Добавление"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
@@ -27,7 +25,6 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/Search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Header"
         app:layout_constraintTop_toTopOf="parent"
@@ -39,64 +36,67 @@
         android:layout_height="40dp"
         android:layout_marginTop="25dp"
         android:onClick="onBack"
-        app:layout_constraintBottom_toTopOf="@+id/Search"
         app:layout_constraintEnd_toStartOf="@+id/Header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow" />
 
-    <ImageView
-        android:id="@+id/Plants"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:onClick="OnClickInfo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Plants2"
-        app:layout_constraintTop_toBottomOf="@+id/Search"
-        app:srcCompat="@drawable/plant" />
-
-    <ImageView
-        android:id="@+id/Plants2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:onClick="OnClickInfo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Plants"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Search"
-        app:srcCompat="@drawable/plant" />
-
-    <TextView
-        android:id="@+id/NazvPlant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Название"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintEnd_toStartOf="@+id/NazvPlant2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Plants2" />
-
-    <TextView
-        android:id="@+id/NazvPlant2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Алоэ"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/NazvPlant"
-        app:layout_constraintTop_toBottomOf="@+id/Plants" />
-
-    <SearchView
+    <EditText
         android:id="@+id/Search"
-        android:layout_width="410dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="26dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textSize="14sp"
+        android:text="Поиск 🔎"
+        android:textColor="@color/text"
+        android:background="@drawable/border_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header" />
+        app:layout_constraintTop_toBottomOf="@+id/TxtBack" />
+
+    <TextView
+        android:id="@+id/PopularPlant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Популярные растения"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="318dp"
+        app:layout_constraintTop_toBottomOf="@+id/Search"
+        app:layout_constraintBottom_toTopOf="@+id/imgPlant"/>
+
+    <ImageView
+        android:id="@id/imgPlant"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/photo_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgPlant"
+        app:layout_constraintTop_toBottomOf="@+id/PopularPlant" />
+
+    <ImageView
+        android:id="@id/imgPlant"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPlant"
+        app:layout_constraintTop_toBottomOf="@+id/PopularPlant" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

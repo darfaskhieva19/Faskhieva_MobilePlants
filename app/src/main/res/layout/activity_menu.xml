@@ -23,7 +23,7 @@
         android:id="@+id/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Напоминание"
+        android:text="Мои растения"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginTop="45dp"
