@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="45dp"
-                android:text="Что-то"
+                android:text="Уход за растениями"
                 android:textSize="17sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

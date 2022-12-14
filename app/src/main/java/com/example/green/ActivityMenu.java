@@ -18,4 +18,9 @@ public class ActivityMenu extends AppCompatActivity {
         Intent intent = new Intent(ActivityMenu.this,PlantsAdd.class);
         startActivity(intent);
     }
+
+    public void onSetting(View view) { //переход в настройки
+        Intent intent = new Intent(ActivityMenu.this, SettingsActivity.class);
+        startActivity(intent);
+    }
 }

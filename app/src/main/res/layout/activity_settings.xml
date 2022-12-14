@@ -6,4 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
+    <TextView
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Настройки"
+        android:textSize="22sp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Напоминания"
+        app:layout_constraintEnd_toStartOf="@+id/Notifications"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting" />
+
+    <TextView
+        android:id="@+id/Notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уведомления"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Reminder"
+        app:layout_constraintTop_toBottomOf="@+id/setting" />
+
+    <Button
+        android:id="@+id/TimeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Изменить время"
+        android:layout_marginTop="25dp"
+        android:onClick="setTime"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Reminder" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Настройки"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Notifications"
+        app:layout_constraintStart_toEndOf="@+id/TimeBtn"/>
+
+    <android.widget.Button
+        android:id="@+id/BtnBack"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:onClick="BackMenu"
+        android:text="Вернуться"
+        android:background="@drawable/color_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="656dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
